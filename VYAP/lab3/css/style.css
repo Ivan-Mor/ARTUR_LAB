@@ -1,0 +1,189 @@
+/* Единый стиль оформления. Тематика — космос.
+   Используются возможности CSS3: градиенты, flexbox, тени,
+   скругления, переходы (transition), фильтры. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #1f2a44;
+  background: linear-gradient(160deg, #0b1e3a 0%, #14315c 55%, #1f2a44 100%);
+}
+
+/* ---------- Шапка ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 40px 18px;
+}
+
+.site-header h1 {
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #bcd0f0;
+  font-size: 15px;
+}
+
+.logo {
+  width: 84px;
+  height: 84px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* ---------- Панель управления ---------- */
+
+.controls {
+  margin: 0 40px 24px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  align-items: flex-end;
+}
+
+.controls h2 {
+  width: 100%;
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.controls select {
+  padding: 7px 10px;
+  border: 1px solid #9fb2d1;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.controls select:hover  { border-color: #2980b9; }
+
+.controls select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.25);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #3498db, #2471a3);
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Родительский блок ---------- */
+
+.work-area { margin: 0 40px 24px; }
+
+.parent-block {
+  position: relative;
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 255, 255, 0.25),
+    0 12px 26px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* Дочерние блоки: позиция relative — по заданию */
+.block {
+  position: relative;
+  padding: 16px 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s;
+}
+
+.block:hover { transform: scale(1.02); }
+
+.block span { display: block; }
+
+.block h1, .block h2, .block h3,
+.block h4, .block h5, .block h6 {
+  margin: 0 0 6px;
+}
+
+.block p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ---------- Панель информации ---------- */
+
+.info-panel {
+  margin: 0 40px 30px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.info-panel h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.info-content {
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+
+.info-content ul { margin: 4px 0; }
+.info-content li { margin: 2px 0; }
+
+/* ---------- Подвал ---------- */
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 40px 26px;
+  color: #bcd0f0;
+  font-size: 14px;
+}
+
+.logo-small {
+  width: 30px;
+  height: 30px;
+}

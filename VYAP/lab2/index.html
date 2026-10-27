@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа №2 — Картотека посетителей поликлиники</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <svg class="header__icon" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="rgba(255,255,255,.15)"/>
+        <rect x="12" y="26" width="40" height="12" rx="4" fill="#fff"/>
+        <rect x="26" y="12" width="12" height="40" rx="4" fill="#fff"/>
+      </svg>
+      <div>
+        <h1>Картотека посетителей поликлиники</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- ===== Форма заполнения записи ===== -->
+    <section class="card">
+      <h2 class="card__title">Форма заполнения записи</h2>
+      <form id="record-form" autocomplete="off">
+        <div class="form-grid">
+          <label class="field">
+            <span>ID записи</span>
+            <input type="number" id="inp-id" min="1" placeholder="авто">
+          </label>
+          <label class="field">
+            <span>ФИО пациента *</span>
+            <input type="text" id="inp-name" placeholder="Никитина Елена Владимировна">
+          </label>
+          <label class="field">
+            <span>Адрес *</span>
+            <input type="text" id="inp-address" placeholder="г. Минск, ул. Кальварийская, 7">
+          </label>
+          <label class="field">
+            <span>Телефон *</span>
+            <input type="text" id="inp-phone" placeholder="+375 (29) 000-00-00">
+          </label>
+          <label class="field field--checkbox">
+            <input type="checkbox" id="inp-flag">
+            <span>Нуждается в стационарной помощи</span>
+          </label>
+        </div>
+
+        <!-- сюда динамически добавляются веб-элементы для новых свойств -->
+        <div class="form-grid" id="dynamic-inputs"></div>
+
+        <div class="btn-row">
+          <button type="button" class="btn btn--primary" id="btn-add">Ввести новую запись</button>
+          <button type="button" class="btn" id="btn-clear">Очистить форму</button>
+          <button type="button" class="btn" id="btn-find">Найти запись по ID</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ===== Операции с записями и свойствами ===== -->
+    <section class="card">
+      <h2 class="card__title">Операции с записями</h2>
+      <div class="form-grid">
+        <label class="field">
+          <span>Все ID записей</span>
+          <select id="select-id"></select>
+        </label>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn--danger" id="btn-delete">Удалить запись с выбранным ID</button>
+        <button type="button" class="btn btn--accent" id="btn-inpatients">Вывести ФИО пациентов, нуждающихся в стационарной помощи</button>
+      </div>
+
+      <h2 class="card__title card__title--sub">Свойства объекта</h2>
+      <div class="form-grid">
+        <label class="field">
+          <span>Новое свойство</span>
+          <select id="select-prop">
+            <option value="телефон учреждения">телефон учреждения</option>
+            <option value="адрес учреждения">адрес учреждения</option>
+            <option value="ФИО учредителя">ФИО учредителя</option>
+            <option value="примечание">примечание</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Значение свойства</span>
+          <input type="text" id="inp-prop-value" placeholder="значение нового свойства">
+        </label>
+        <label class="field">
+          <span>Убрать свойство</span>
+          <select id="select-remove-prop"></select>
+        </label>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn--primary" id="btn-add-prop">Добавить свойство</button>
+        <button type="button" class="btn btn--danger" id="btn-remove-prop">Убрать свойство</button>
+      </div>
+      <p class="hint">Новое свойство добавляется записи, выбранной в списке «Все ID записей». После добавления на форме появляется веб-элемент для ввода значения этого свойства у новых записей, а в таблице — новый столбец.</p>
+    </section>
+
+    <!-- ===== Таблица записей ===== -->
+    <section class="card">
+      <h2 class="card__title">Таблица записей посетителей поликлиники</h2>
+      <div class="table-wrap">
+        <table id="records-table"></table>
+      </div>
+    </section>
+
+    <!-- ===== Вывод результатов ===== -->
+    <section class="card">
+      <h2 class="card__title">Результат операции</h2>
+      <div id="output" class="output">Здесь появятся результаты операций…</div>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

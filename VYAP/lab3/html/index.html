@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторная работа — вариант 2. Классы и наследование</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="../resource/logo.svg" alt="Планета с кольцами — логотип" class="logo">
+    <div>
+      <h1>Космический дайджест</h1>
+    </div>
+  </header>
+
+  <section class="controls">
+    <h2>Вставка нового дочернего блока</h2>
+
+    <label>Позиция по порядку
+      <select id="select-position"></select>
+    </label>
+    <label>Цвет блока (Set)
+      <select id="select-color"></select>
+    </label>
+    <label>Ширина блока
+      <select id="select-width">
+        <option value="200">200 px</option>
+        <option value="260" selected>260 px</option>
+        <option value="320">320 px</option>
+        <option value="400">400 px</option>
+      </select>
+    </label>
+    <label>Заголовок (Set)
+      <select id="select-title"></select>
+    </label>
+    <label>Тип заголовка
+      <select id="select-tag">
+        <option value="h1">Заголовок 1</option>
+        <option value="h2" selected>Заголовок 2</option>
+        <option value="h3">Заголовок 3</option>
+        <option value="h4">Заголовок 4</option>
+        <option value="h5">Заголовок 5</option>
+        <option value="h6">Заголовок 6</option>
+      </select>
+    </label>
+    <label>Текст параграфа (Set)
+      <select id="select-text"></select>
+    </label>
+
+    <div class="buttons">
+      <button id="btn-insert" type="button">Вставить блок</button>
+      <button id="btn-show-list" type="button">Данные списком</button>
+      <button id="btn-show-text" type="button">Данные текстом</button>
+    </div>
+  </section>
+
+  <main id="work-area" class="work-area"></main>
+
+  <footer class="site-footer">
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
