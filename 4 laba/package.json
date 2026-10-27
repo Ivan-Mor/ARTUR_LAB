@@ -1,0 +1,9 @@
+{
+  "name": "lab4-nodejs",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №4. Вариант 6: массив 100 элементов, таблица 10x10, сортировка, минимум",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
