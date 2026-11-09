@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<organization>
+    <organizationName>IT-Company</organizationName>
+    <location>BELARUS</location>
+    <departments>
+        <department>
+            <departmentNumber>D01</departmentNumber>
+            <departmentName>DEVELOPMENT</departmentName>
+            <location>MINSK</location>
+            <employees>
+                <employee>
+                    <employeeNumber>E01</employeeNumber>
+                    <employeeName>Tom</employeeName>
+                </employee>
+                <employee>
+                    <employeeNumber>E02</employeeNumber>
+                    <employeeName>Mary</employeeName>
+                    <managerNumber>E01</managerNumber>
+                </employee>
+            </employees>
+        </department>
+        <department>
+            <departmentNumber>D02</departmentNumber>
+            <departmentName>QUALITY ASSURANCE</departmentName>
+            <location>BREST</location>
+            <employees>
+                <employee>
+                    <employeeNumber>E03</employeeNumber>
+                    <employeeName>John</employeeName>
+                </employee>
+                <employee>
+                    <employeeNumber>E04</employeeNumber>
+                    <employeeName>Kate</employeeName>
+                    <managerNumber>E03</managerNumber>
+                </employee>
+            </employees>
+        </department>
+    </departments>
+</organization>

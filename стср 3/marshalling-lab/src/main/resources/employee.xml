@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Employees>
+                            
+    
+    
+    
+    
+    
+    <Employee id="1">
+                                                        
+        
+        
+        
+        
+        
+        <name>Ivan</name>
+                                                        
+        
+        
+        
+        
+        
+        <gender>male</gender>
+                                                        
+        
+        
+        
+        
+        
+        <age>25</age>
+                                                        
+        
+        
+        
+        
+        
+        <role>Developer</role>
+                                                        
+        
+        
+        
+        
+        
+        <salary>1500.0</salary>
+                                                        
+        
+        
+        
+        
+        
+        <email>ivan@company.com</email>
+                                                        
+        
+        
+        
+        
+        
+        <department>Backend</department>
+                                                    
+    
+    
+    
+    
+    
+    </Employee>
+                            
+    
+    
+    
+    
+    
+    <Employee id="2">
+                                                        
+        
+        
+        
+        
+        
+        <name>Anna</name>
+                                                        
+        
+        
+        
+        
+        
+        <gender>female</gender>
+                                                        
+        
+        
+        
+        
+        
+        <age>30</age>
+                                                        
+        
+        
+        
+        
+        
+        <role>Analyst</role>
+                                                        
+        
+        
+        
+        
+        
+        <salary>1200.0</salary>
+                                                        
+        
+        
+        
+        
+        
+        <email>anna@company.com</email>
+                                                        
+        
+        
+        
+        
+        
+        <department>Analytics</department>
+                                                    
+    
+    
+    
+    
+    
+    </Employee>
+                            
+    
+    
+    
+    
+    
+    <Employee id="3">
+                                                        
+        
+        
+        
+        
+        
+        <name>Mikhail</name>
+                                                        
+        
+        
+        
+        
+        
+        <gender>male</gender>
+                                                        
+        
+        
+        
+        
+        
+        <age>35</age>
+                                                        
+        
+        
+        
+        
+        
+        <role>Team Lead</role>
+                                                        
+        
+        
+        
+        
+        
+        <salary>2200.0</salary>
+                                                        
+        
+        
+        
+        
+        
+        <email>mikhail@company.com</email>
+                                                        
+        
+        
+        
+        
+        
+        <department>Backend</department>
+                                                    
+    
+    
+    
+    
+    
+    </Employee>
+    
+</Employees>

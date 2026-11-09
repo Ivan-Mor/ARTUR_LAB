@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <build id="pc001">
+        <processor>AMD Ryzen 5 7600</processor>
+        <graphics>NVIDIA GeForce RTX 4060</graphics>
+        <memory>16</memory>
+        <storage>SSD 512 GB</storage>
+        <price>1250</price>
+    </build>
+    <build id="pc002">
+        <processor>Intel Core i5-13400F</processor>
+        <graphics>NVIDIA GeForce RTX 3060</graphics>
+        <memory>16</memory>
+        <storage>HDD 1 TB</storage>
+        <price>980</price>
+    </build>
+    <build id="pc003">
+        <processor>AMD Ryzen 7 7800X3D</processor>
+        <graphics>NVIDIA GeForce RTX 4070</graphics>
+        <memory>32</memory>
+        <storage>SSD 1 TB</storage>
+        <price>2100</price>
+    </build>
+    <build id="pc004">
+        <processor>Intel Core i3-12100F</processor>
+        <graphics>AMD Radeon RX 6600</graphics>
+        <memory>8</memory>
+        <storage>SSD 480 GB</storage>
+        <price>650</price>
+    </build>
+    <build id="pc005">
+        <processor>AMD Ryzen 9 7900X</processor>
+        <graphics>NVIDIA GeForce RTX 4080</graphics>
+        <memory>64</memory>
+        <storage>SSD 2 TB</storage>
+        <price>3400</price>
+    </build>
+    <build id="pc006">
+        <processor>Intel Core i5-12400F</processor>
+        <graphics>AMD Radeon RX 7600</graphics>
+        <memory>16</memory>
+        <storage>SSD 960 GB</storage>
+        <price>1100</price>
+    </build>
+</catalog>
