@@ -1,0 +1,9 @@
+{
+  "name": "lab5-ajax",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №5. Вариант 2: асинхронная подгрузка данных об артистах (JSON, текст, фото и видео) на Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

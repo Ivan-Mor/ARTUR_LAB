@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вариант 2 — Артисты</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <img src="/resource/logo.svg" alt="Логотип" class="logo">
+    <div>
+      <h1>Лабораторная работа №5. Вариант 2</h1>
+      <p class="subtitle">Асинхронная подгрузка данных об артистах (Ajax, Node.js)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Выбор артиста</h2>
+      <form id="artist-form" class="artist-form">
+        <label for="artist-select">ФИО артиста:</label>
+        <select id="artist-select" name="artist">
+          <option value="tchaikovsky">Чайковский Пётр Ильич</option>
+          <option value="rachmaninov">Рахманинов Сергей Васильевич</option>
+          <option value="glinka">Глинка Михаил Иванович</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="button" id="load-json" class="btn">Данные артиста (JSON)</button>
+          <button type="button" id="load-text" class="btn">Биография (текст)</button>
+          <button type="button" id="load-media" class="btn">Фото и видео</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card highlight">
+      <h2>Данные об артисте (из JSON-файла)</h2>
+      <div id="artist-info">
+        <p class="placeholder">Выберите артиста и нажмите «Данные артиста (JSON)».</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Биография (из текстового файла)</h2>
+      <div id="artist-text" class="text-block">
+        <p class="placeholder">Нажмите «Биография (текст)», чтобы подгрузить текстовый файл.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Фото и видеоролик об артисте</h2>
+      <div id="artist-media" class="media-block">
+        <p class="placeholder">Нажмите «Фото и видео», чтобы подгрузить изображение и видеоролик.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Node.js · Асинхронный обмен данными с сервером (промисы, async/await)</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
