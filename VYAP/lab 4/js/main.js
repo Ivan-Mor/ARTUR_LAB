@@ -1,16 +1,18 @@
+// Клиентский сценарий первой страницы: массив до обработки (таблица 8x10)
+
 function cellColor(value) {
-  const ratio = (value - 10) / 50;
+  const ratio = (value - 1) / 9; // значения от 1 до 10
   const hue = 200 - ratio * 200;
   return 'hsl(' + hue + ', 75%, 55%)';
 }
 
-function buildTable(values) {
+function buildTable(values, rows, cols) {
   const table = document.createElement('table');
-  for (let row = 0; row < 10; row++) {
+  for (let row = 0; row < rows; row++) {
     const tr = document.createElement('tr');
-    for (let col = 0; col < 10; col++) {
+    for (let col = 0; col < cols; col++) {
       const td = document.createElement('td');
-      const value = values[row * 10 + col];
+      const value = values[row * cols + col];
       td.textContent = value;
       td.style.background = cellColor(value);
       tr.appendChild(td);
@@ -23,7 +25,7 @@ function buildTable(values) {
 fetch('/api/data')
   .then(function (response) { return response.json(); })
   .then(function (data) {
-    document.getElementById('original-table').appendChild(buildTable(data.original));
+    document.getElementById('original-table').appendChild(buildTable(data.original, 8, 10));
   });
 
 document.getElementById('show-sorted').addEventListener('click', function () {

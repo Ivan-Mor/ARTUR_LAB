@@ -74,7 +74,7 @@ body {
   border-color: var(--accent);
 }
 
-.min-box {
+.value-box {
   font-size: 48px;
   font-weight: 700;
   text-align: center;

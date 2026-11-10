@@ -1,3 +1,5 @@
+// Сервер Node.js (только встроенные модули: http, fs, path)
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -38,7 +40,7 @@ const server = http.createServer((req, res) => {
     sendJson(res, {
       original: data.original,
       sorted: data.sorted,
-      min: data.min
+      max: data.max
     });
     return;
   }
