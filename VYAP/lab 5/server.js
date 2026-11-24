@@ -5,7 +5,7 @@ const http = require('http');
 const fs = require('fs/promises');
 const path = require('path');
 
-const port = 3001;
+const port = 3000;
 const root = __dirname;
 
 const types = {

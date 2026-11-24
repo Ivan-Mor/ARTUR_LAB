@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автопрокат · MongoDB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/"><img src="/resource/road.svg" alt=""><span>ROUTE<span class="brand-light">/RENTAL</span></span></a><div class="course-mark">ВЯП <span>ЛАБОРАТОРНАЯ № 7</span></div></header>
+  <main class="page">
+    <section class="hero"><div><div class="eyebrow"><span class="pulse"></span> FLEET OPERATIONS · ВАРИАНТ 15</div><h1>Заказы<br><em>автопроката</em></h1><p>Реестр заказов, диапазон цен и быстрая замена записи в MongoDB.</p></div><div class="connection"><span class="connection-dot" id="connection-dot"></span><span id="connection-status">ПОДКЛЮЧЕНИЕ К БАЗЕ</span><small>MongoDB · vyap_lab7</small></div></section>
+    <section class="dashboard">
+      <section class="panel query-panel"><div class="panel-heading"><div><div class="eyebrow">01 / ПОИСК</div><h2>Марки в ценовом диапазоне</h2></div><span class="icon">⌕</span></div><p class="hint">Показать автомобили, цена заказа которых входит в заданный диапазон.</p><form id="range-form" class="range-form"><label>От, BYN<input name="min" type="number" min="0" step="1" value="70" required></label><span class="range-dash">—</span><label>До, BYN<input name="max" type="number" min="0" step="1" value="150" required></label><button class="button primary" type="submit">Найти марки <span>↗</span></button></form><div id="range-results" class="result-zone"><div class="placeholder">Результаты запроса появятся здесь</div></div></section>
+      <section class="panel replace-panel"><div class="panel-heading"><div><div class="eyebrow">02 / ЗАМЕНА</div><h2>Обновить заказ</h2></div><span class="step">DELETE → INSERT</span></div><p class="hint">Удалить запись с указанным номером и сохранить вместо неё новые данные.</p><form id="replace-form" class="form-grid"><label>Номер заказа для замены<input name="oldNumber" placeholder="AR-2401" required></label><label>Новый номер заказа<input name="orderNumber" placeholder="AR-2405" required></label><label>Марка автомобиля<input name="carBrand" placeholder="Hyundai Sonata" required></label><label>Время заказа<input name="orderedAt" type="datetime-local" required></label><label>Цена, BYN<input name="price" type="number" min="0" step="0.01" placeholder="110" required></label><button class="button dark" type="submit">Заменить запись <span>↗</span></button></form></section>
+      <section class="panel data-panel"><div class="panel-heading"><div><div class="eyebrow">03 / КОЛЛЕКЦИЯ</div><h2>Все заказы</h2></div><button class="button secondary" id="refresh-orders" type="button">Обновить список ↻</button></div><div id="orders-list" class="orders-list"></div></section>
+      <section class="panel manage-panel"><div class="panel-heading"><div><div class="eyebrow">04 / УПРАВЛЕНИЕ</div><h2>Найти и изменить</h2></div><span class="icon small">↗</span></div><form id="lookup-form" class="lookup-form"><label>Номер заказа<input name="orderNumber" placeholder="AR-2402" required></label><button class="button outline" type="submit">Найти заказ</button></form><form id="edit-form" class="form-grid edit-form" hidden><label>Марка автомобиля<input name="carBrand" required></label><label>Время заказа<input name="orderedAt" type="datetime-local" required></label><label>Цена, BYN<input name="price" type="number" min="0" step="0.01" required></label><button class="button primary" type="submit">Сохранить изменения</button></form><div class="manage-actions"><form id="create-form" class="create-form"><input name="orderNumber" placeholder="Номер нового заказа" required><input name="carBrand" placeholder="Марка автомобиля" required><input name="orderedAt" type="datetime-local" required><input name="price" type="number" min="0" step="0.01" placeholder="Цена" required><button class="button outline" type="submit">Добавить заказ</button></form><button class="button danger" id="delete-order" type="button">Удалить найденный</button></div></section>
+    </section>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <footer><span>ВЯП · ЛАБОРАТОРНАЯ РАБОТА № 7</span><span>МОБИЛЬНОСТЬ ПО ЗАПРОСУ <b>●</b> 2026</span></footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

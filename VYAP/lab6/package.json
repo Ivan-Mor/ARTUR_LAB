@@ -1,0 +1,12 @@
+{
+  "name": "vyap-lab6-handlebars",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №6. Шаблонизация данных о компьютерной технике",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}

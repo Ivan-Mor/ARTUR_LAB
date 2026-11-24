@@ -1,0 +1,13 @@
+{
+  "name": "vyap-lab7-mongodb",
+  "version": "1.0.0",
+  "description": "Лабораторная работа №7. MongoDB: система заказов проката автомобилей",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "mongoose": "^8.24.8"
+  }
+}
