@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    options {
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
+        skipDefaultCheckout(true)
+    }
+    triggers { pollSCM('H/2 * * * *') }
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    def scmInfo = checkout scm
+                    env.CHECKED_OUT_BRANCH = scmInfo.GIT_BRANCH ?: ''
+                }
+            }
+        }
+        stage('Build & Test') {
+            steps { bat 'mvn clean test' }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                    publishHTML([allowMissing: true, keepAll: true, reportDir: 'target/site/jacoco', reportFiles: 'index.html', reportName: 'JaCoCo Coverage'])
+                }
+            }
+        }
+        stage('Package') {
+            steps { bat 'mvn package -DskipTests' }
+            post { success { archiveArtifacts artifacts: 'target/*.jar', fingerprint: true } }
+        }
+        stage('Deploy Local Production') {
+            when { expression { env.CHECKED_OUT_BRANCH == 'main' || env.CHECKED_OUT_BRANCH == 'origin/main' } }
+            steps { bat 'start "" /B java -jar target/sorting-ci-1.0.0.jar > production_app.log 2>&1' }
+        }
+    }
+}
